@@ -6,15 +6,22 @@
 }
 
 
-html,body{
-    display:grid;
+body{
+    /* display:grid;
     height: 100%;
-    place-items: center;
+    place-items: center; */
     background: #1abc9c;
+    overflow: hidden;
+}
+
+.container{
+    max-width:440px ;
+    padding: 0 20px;
+    margin: 170px auto;
 }
 
 .wrapper{
-    width: 380px;
+    width: 100%;
     background-color: #fff;
     border-radius: 5px;
 }
@@ -22,15 +29,16 @@ html,body{
 .wrapper .title{
         line-height: 80px;
         background: #16a085;
-        padding-left: 20px;
+        padding-left: 10px;
         border-radius: 5px 5px 0 0;
         color: #fff;
-        font-size: 25px;
+        text-align: center;
+        font-size: 30px;
         font-weight: 600;
 }
 
 .wrapper form{
-    padding: 30px 20px 25px 20px;
+    padding: 30px 25px 25px 25px;
 }
 
 .wrapper form .row{
@@ -48,6 +56,12 @@ html,body{
     border-radius: 5px;
     border: 1px solid lightgrey;
     font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+form .row input:focus{
+    border-color: #16a085;
+    box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
 }
 
 .wrapper form .row i{
@@ -64,6 +78,24 @@ html,body{
     justify-content: center;
 }
 
+.wrapper form .pass{
+    margin: -7px 0 21px 0;
+}
+
+.wrapper form .pass a{
+    color: #16a085;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+.wrapper form .pass a:hover{
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+
+
 .wrapper form .button input{
         color: #fff;
         padding-left: 0px;
@@ -74,9 +106,26 @@ html,body{
         cursor: pointer;
 }
 
+.wrapper form .signup-link{
+    text-align: center;
+    margin-top: 11px;
+}
+
+.wrapper form .signup-link a{
+    color: #16a085;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+
+.wrapper form .signup-link a:hover{
+    text-decoration: underline;
+    font-size: 18px;
+
+}
 .wrapper form .button input:hover{
     color: #16a085;
-    
+    font-size: 25px;
     border: 1px solid black;
     background-color: #fff;
 }
